@@ -1,5 +1,5 @@
 import React from "react";
-import "./Menubar.css";
+import "./Menubar.scss";
 
 const Menubar = () => {
   return (

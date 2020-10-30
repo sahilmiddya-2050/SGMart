@@ -14,7 +14,7 @@
   height: 60px;
   width: 100%;
   background-color: #ffffff;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #f6f6f6;
   padding: 0 6px;
   h1 {
     color: #404258;
@@ -38,6 +38,7 @@
 // Navbar Location
 .navbar__location {
   @include flex();
+  cursor: pointer;
   height: 60px;
   margin-left: -8rem;
   margin-right: 8px;
@@ -114,10 +115,11 @@
 
 .navbar__userinfo {
   @include flex();
-  justify-content: space-between;
+  // justify-content: space-between;
+  cursor: pointer;
   background-color: #f9f9f9;
   border: 1px solid black;
-  height: 55px;
+  height: 61px;
   padding: 0 3px;
   width: 10rem;
   border-radius: 50px;
