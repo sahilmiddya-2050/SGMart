@@ -14,8 +14,8 @@
   height: 60px;
   width: 100%;
   background-color: #ffffff;
-  border-bottom: 1px solid #f6f6f6;
-  padding: 0 6px;
+  border-bottom: 1px solid #ececec;
+  padding: 0 10px;
   h1 {
     color: #404258;
     font-size: 2rem;
@@ -38,6 +38,7 @@
 // Navbar Location
 .navbar__location {
   @include flex();
+  z-index: 11;
   cursor: pointer;
   height: 60px;
   margin-left: -8rem;
@@ -118,11 +119,12 @@
   // justify-content: space-between;
   cursor: pointer;
   background-color: #f9f9f9;
-  border: 1px solid black;
+  // border: 1px solid black;
+  z-index: 11;
   height: 61px;
   padding: 0 3px;
   width: 10rem;
-  border-radius: 50px;
+  border-radius: 20px;
 }
 
 // Responsive ness
@@ -175,11 +177,85 @@
     .navbar__phone {
       display: none;
     }
-    .navbar__userinfo {
-      width: 5.5rem;
-      p {
-        display: none;
-      }
+  }
+}
+// width 797px
+@media screen and (max-width: 797px) {
+  .navbar__location {
+    margin-left: -7.5rem;
+    .location__indicator__name {
+      display: none;
     }
   }
+  .navbar__help {
+    display: none;
+  }
+  .navbar__offers {
+    display: none;
+  }
+  .navbar {
+    position: relative;
+  }
+  .navbar__wishlist {
+    position: fixed;
+    top: 5.3%;
+    transform: translateY(-50%);
+    right: 30%;
+    margin-right: 10px;
+  }
+  .navbar__userinfo {
+    position: fixed;
+    top: 5.3%;
+    transform: translateY(-50%);
+    right: 2%;
+  }
+
+  .navbar__search {
+    display: none;
+  }
+
+  .navbar__information {
+    margin-left: -1rem;
+    .navbar__phone {
+      display: none;
+    }
+  }
+}
+// width 614px
+@media screen and (max-width: 614px) {
+  // .navbar__help {
+  //   display: none;
+  // }
+  // .navbar__offers {
+  //   display: none;
+  // }
+  .navbar {
+    position: relative;
+  }
+  .navbar__location {
+    position: fixed;
+    top: 0%;
+    left: 60%;
+    // transform: translateY(-50);
+  }
+  .navbar__wishlist {
+    display: none;
+  }
+  .navbar__userinfo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2%;
+  }
+
+  // .navbar__search {
+  //   display: none;
+  // }
+
+  // .navbar__information {
+  //   margin-left: -1rem;
+  //   .navbar__phone {
+  //     display: none;
+  //   }
+  // }
 }

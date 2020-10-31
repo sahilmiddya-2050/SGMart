@@ -1,0 +1,30 @@
+.hamburger {
+  height: 100%;
+  width: 5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  div {
+    cursor: pointer;
+    background-color: #eeeeee;
+    padding: 0.1rem;
+    border-radius: 4px;
+    div {
+      width: 2.5rem;
+      height: 0.15rem;
+      border-radius: 5px;
+      background-color: #2b2f4c;
+      margin: 0.4rem 0.3rem;
+    }
+  }
+  display: none;
+}
+
+@media screen and (max-width: 1064px) {
+  .hamburger {
+    display: flex;
+  }
+}

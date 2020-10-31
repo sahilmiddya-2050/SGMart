@@ -1,5 +1,132 @@
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
 .menubar {
   height: 65px;
   width: 100%;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #ececec;
+  @include flex();
+  position: relative;
+}
+
+.menubar__category {
+  // border-right: 1px solid red;
+  height: 100%;
+  @include flex();
+  padding: 0 2rem;
+  p {
+    margin-left: 1rem;
+  }
+  .menubar__category-icon {
+    font-size: 1.1rem;
+    margin-top: 2px;
+  }
+  transition: background-color 0.3s ease, color 0.3s ease;
+  &:hover {
+    background-color: #f55d2c;
+    color: #ffffff;
+  }
+}
+
+.menubar__menus {
+  padding: 0 3rem;
+  @include flex();
+  height: 100%;
+  div {
+    height: 100%;
+    @include flex();
+    padding-right: 3rem;
+  }
+}
+
+.menubar__shopping-cart {
+  height: 100%;
+  @include flex();
+  justify-content: center;
+  background-color: #f55d2c;
+  color: #ffffff;
+  // width: 10%;
+  width: 10rem;
+  position: absolute;
+  left: 100%;
+  transform: translateX(-100%);
+  .menubar__shopping-cart-icon {
+    font-size: 1.1rem;
+  }
+  p {
+    margin-right: 0.5rem;
+    margin-left: 0.4rem;
+  }
+}
+
+.menubar__menus-pages-dropdown-icon {
+  margin-top: 3px;
+}
+
+.menubar__search {
+  display: none;
+}
+
+@media screen and (max-width: 1064px) {
+  .menubar {
+    border-bottom: 1px solid #ececec;
+  }
+
+  .menubar__menus {
+    // z-index: -9;
+    background-color: #ffffff;
+    // border: 1px solid tomato;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 101%;
+    left: -102%;
+    visibility: hidden;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    div {
+      height: 30px;
+      margin: 10px 0;
+    }
+    transition: all 0.3s ease;
+  }
+
+  .menubar__shopping-cart {
+    transform: translateX(-15rem);
+  }
+  .menubar__search {
+    position: absolute;
+    background-color: #2b2f4c;
+    color: #ffffff;
+    height: 100%;
+    @include flex();
+    justify-content: center;
+    width: 5rem;
+    left: 100%;
+    transform: translateX(-100%);
+  }
+  .menubar__category {
+    position: absolute;
+    left: 5rem;
+    // border-left: 1px solid red;
+  }
+}
+
+// For screen idth 529px
+@media screen and (max-width: 529px) {
+  .menubar__shopping-cart {
+    position: absolute;
+    width: 8rem;
+    left: 107%;
+    // transform: translateX(10px);
+  }
+  .menubar__shopping-cart--responsive {
+    display: none;
+  }
 }
