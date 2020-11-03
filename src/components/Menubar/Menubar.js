@@ -18,8 +18,6 @@ const Menubar = () => {
     window.addEventListener("resize", handleWindowResize);
   }, []);
 
-  console.log(windowWidth);
-
   const style =
     windowWidth <= 1064
       ? {

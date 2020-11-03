@@ -1,0 +1,22 @@
+.productSlider1 {
+  margin-top: 2rem;
+  // position: fixed;
+  width: 100vw;
+  margin-left: 2px;
+  // left: 50%;
+  // transform: trsanslateX(-50%);
+  // overflow: hidden;
+}
+
+@media screen and (max-width: 1248px) {
+  .productSlider1 {
+    // width: 30px;mr
+    padding: 0 24px;
+  }
+}
+@media screen and (max-width: 828px) {
+  .productSlider1 {
+    // width: 30px;mr
+    padding: 0;
+  }
+}
