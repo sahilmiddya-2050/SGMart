@@ -11,6 +11,8 @@ const FeatureSection = () => {
       <Products />
       <Products />
       <Offers />
+      <Products />
+      <Products />
     </div>
   );
 };

@@ -1,2 +1,39 @@
 .offers {
+  width: 100%;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(410px, 1fr));
+  grid-gap: 2rem;
+}
+
+.offer__offers {
+  & > p {
+    color: #f55d2c;
+    font-weight: 500;
+    margin-top: 2rem;
+    margin-left: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  & > h2 {
+    color: #404356;
+    font-weight: 700;
+    font-size: 27px;
+    letter-spacing: 1.1px;
+    margin-left: 1.3rem;
+    margin-bottom: -0.5rem;
+  }
+  margin-bottom: 5rem;
+}
+
+.cupon {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 3rem;
+  img {
+    width: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+    height: 11rem;
+    opacity: 0.8;
+  }
 }

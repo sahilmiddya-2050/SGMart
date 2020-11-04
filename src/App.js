@@ -1,10 +1,12 @@
 import React from "react";
+import { Switch, Route } from "react-router-dom";
 import "./App.css";
 import Menubar from "./components/Menubar/Menubar";
 import Navbar from "./components/Navbar/Navbar";
 import { ProductSlider1 } from "./components/ProductSlider1/ProductSlider1";
 import "./App.scss";
 import FeatureSection from "./components/FeatureSection/FeatureSection";
+import DashBoard from "./components/DashBoard/DashBoard";
 
 function App() {
   return (
@@ -14,10 +16,15 @@ function App() {
         <Menubar />
       </header>
       <div className="app__main">
-        <ProductSlider1 />
-        <div className="main__body">
-          <FeatureSection />
-        </div>
+        <Switch>
+          <Route path="/" exact>
+            <ProductSlider1 />
+            <div className="main__body">
+              <FeatureSection />
+            </div>
+          </Route>
+          <Route path="/dashboard" exact component={DashBoard} />
+        </Switch>
       </div>
     </div>
   );

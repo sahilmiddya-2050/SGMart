@@ -39,7 +39,7 @@ const UserSection = () => {
       <li className="user-aligned">
         <DashboardOutlinedIcon />
         <p>
-          <Link to="/">Dashboard</Link>
+          <Link to="/dashboard">Dashboard</Link>
         </p>
       </li>
       <li className="user-aligned">
