@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar/Navbar";
 import { ProductSlider1 } from "./components/ProductSlider1/ProductSlider1";
 import "./App.scss";
 import FeatureSection from "./components/FeatureSection/FeatureSection";
+// import Overview from "./components/DashBoard/Pages/Overview/Overview";
 import DashBoard from "./components/DashBoard/DashBoard";
 
 function App() {
@@ -23,7 +24,11 @@ function App() {
               <FeatureSection />
             </div>
           </Route>
-          <Route path="/dashboard" exact component={DashBoard} />
+          <Route path="/dashboard" exact>
+            <DashBoard />
+            {/* <Overview /> */}
+          </Route>
+          <Route path="/dashboard/:section" exact component={DashBoard} />
         </Switch>
       </div>
     </div>

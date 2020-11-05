@@ -1,0 +1,21 @@
+.overview__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+}
+
+.overview__reward {
+  border: 1px solid lightseagreen;
+  min-width: 420px;
+}
+.overview__order {
+  border: 1px solid lightseagreen;
+  min-width: 420px;
+}
+.overview__wallet {
+  border: 1px solid lightseagreen;
+  min-width: 100%;
+}
+.overview__address {
+  border: 1px solid lightseagreen;
+  min-width: 100%;
+}
