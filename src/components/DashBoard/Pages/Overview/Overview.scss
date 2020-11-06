@@ -1,21 +1,109 @@
+$bb: 1px solid #e0cece;
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+@mixin grid {
+  display: grid;
+  grid-template-rows: 1.2fr 3.5fr 1.2fr;
+  min-width: 420px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  & > h3 {
+    border-bottom: $bb;
+    padding: 0.9rem 0.9rem;
+  }
+  & > p {
+    border-top: $bb;
+    padding: 0.9rem 0.9rem;
+  }
+  & > div {
+    padding: 0.9rem 0.9rem;
+  }
+}
+
+@mixin space-evenly {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  & > p {
+    font-size: 24px;
+    font-weight: 550;
+  }
+}
+
 .overview__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  grid-gap: 1.5rem;
+}
+
+.overview__header {
+  display: flex;
+  flex-direction: column;
+  section {
+    @include flex();
+    .DashboardOutlinedIcon {
+      font-size: 20px;
+    }
+    p {
+      font-size: 20px;
+      margin-left: 0.6rem;
+    }
+  }
+  h1 {
+    font-weight: 500;
+    font-size: 36px;
+  }
+  margin-bottom: 1.5rem;
 }
 
 .overview__reward {
+  @include grid();
   border: 1px solid lightseagreen;
-  min-width: 420px;
+  .reward__details {
+    @include space-evenly();
+    section {
+      @include flex();
+      justify-content: space-between;
+      border: 2px solid lightpink;
+      // span:nth-child(1),span:nth-child(2),span:nth-child(3){}
+    }
+  }
 }
 .overview__order {
+  @include grid();
   border: 1px solid lightseagreen;
-  min-width: 420px;
+  .order__details {
+    @include space-evenly();
+    section {
+      @include flex();
+      justify-content: space-between;
+      border: 2px solid lightpink;
+    }
+  }
 }
 .overview__wallet {
+  @include grid();
   border: 1px solid lightseagreen;
-  min-width: 100%;
+  .wallet__details {
+    @include space-evenly();
+    section {
+      @include flex();
+      justify-content: space-between;
+      border: 2px solid lightpink;
+    }
+  }
 }
 .overview__address {
+  @include grid();
   border: 1px solid lightseagreen;
-  min-width: 100%;
+  .address__details {
+    @include space-evenly();
+    section {
+      @include flex();
+      justify-content: space-between;
+      border: 2px solid lightpink;
+    }
+  }
 }

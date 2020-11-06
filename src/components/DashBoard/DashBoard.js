@@ -76,7 +76,7 @@ const DashBoard = (props) => {
           <Route path="/dashboard/login">
             <Login />
           </Route>
-          <h1>DashBoard</h1>
+          {/* <h1>DashBoard</h1> */}
         </div>
       </main>
     </div>

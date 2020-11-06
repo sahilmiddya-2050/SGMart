@@ -1,6 +1,6 @@
 .dashboard-user__information {
   //   border: 1px solid saddlebrown;
-  margin-top: 4.4rem;
+  margin-top: 3.2rem;
   height: 22.8rem;
   background-color: #f7c9ba;
   display: flex;
@@ -36,7 +36,7 @@
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-gap: 3.2rem;
-    position: relative;
+    padding-bottom: 3.2rem;
   }
 }
 
@@ -58,15 +58,17 @@
 
 .option__nav {
   width: 14rem;
+  height: 21rem;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  // height: 100%;
   position: sticky;
   top: 10rem;
 }
 
 .option__content {
-  background-color: #ffffff;
+  background-color: #f7f7f7;
   // width: 100%;
   //   overflow-y: scroll;
+  // height: 100vh;
 }
